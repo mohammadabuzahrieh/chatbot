@@ -1,0 +1,66 @@
+from nltk.chat.util import Chat, reflections
+
+set_pairs = [
+    [
+        r"Hi|Good Morning|Hello",
+        ["Hello, What can I help you with?"]
+    ],
+    [
+        r"What's my status report?",
+        ["Moe, you currently have a 3 missed alerts." ]
+    ],
+    [
+        r"Ugh|what are they|idc?",
+        ["One is from mama, td ameritrade and microsoft?", ]
+    ],
+    [
+        r"What did microsoft say?",
+        ["You got the job!" ]
+    ],
+    [
+        r"Really?",
+        ["No.", ]
+    ],
+    [
+        r"What did they really say?",
+        ["They want to invite you for a second interview!!" ]
+    ],
+    [
+        r"Very funny",
+        ["Did I get you?", ]
+    ],
+    [
+        r"You did not|no",
+        ["Well its true, they want to see you again.", ]
+    ],
+    [
+        r"Great when?",
+        ["Tomorrow at 3!", ]
+    ],
+    [
+        r"Amazing thank you",
+        ["Good luck! Dont wakeup late", ]
+    ],
+    [
+        r"I won't",
+        ["Good! Anything else I can assist you with?", ]
+    ],
+    [
+        r"I'm ok for now",
+        ["Alright, Goodbye! Have a good day!"]
+    ],
+]
+
+
+def chatbot():
+    print("Welcome to your personal chatbot!")
+
+
+chatbot()
+
+chat = Chat(set_pairs, reflections)
+print(chat)
+
+chat.converse()
+if name == "main":
+    chatbot()
